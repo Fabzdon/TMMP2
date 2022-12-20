@@ -1,0 +1,542 @@
+*
+{
+    margin:0;
+    padding: 0;
+    
+}
+#map {
+    width: 600px;
+    height: 600px;
+  }
+
+.price /*Changes the font size of the prices to 1px*/
+{
+    font-size: 1px;
+}
+
+/* navigation */
+#nav-bar
+{
+    position: sticky; /* nav bar position stays in place */
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand img /* set size and position of the image that act as a logo in the navbar */
+{
+    height: 20px;
+    padding-right: 30px; /* 30px from the right */
+}
+.navbar-nav li /*Changes the spaces from the left and right side between each list on the navbar e.g home, about us etc*/
+{
+    padding: 0 10px; /* 0px space on top and 10px space for the left and ride side */
+}
+.navbar-nav li a /* sets the position of the drop down menu to the right when collapse*/
+{
+    float: right;
+    text-align: left; /* sets the position of the drop down menu to the left*/
+}
+#nav-bar ul li a:hover /* color changes when hover over the list in the drop down */
+{
+    color: #007bff!important;
+}
+
+.navbar
+{
+    background: #fff;
+}
+.navbar-toggler
+{
+    border: none!important;
+}
+.navbar-link
+{
+    color: #555!important;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.dropdown-menu .dropdown-item{
+    background-color: inherit !important;
+    color: #858b97 !important;
+   
+}
+
+/* #Slider .Headerslider {
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+} */
+
+
+/*----------------About-----------*/
+#About
+{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(Pictures/fin.jpg);/*Sets the backgroud image with a black gradient*/
+    padding-top: 50px; /*Set the space above content, in this case the heading 'About' 50 px from the top'*/
+    padding-bottom: 50px; /*Same as the top*/
+    color: white; /*Color of the text 'about' set to white*/
+}
+
+#About h2::after /*This set the line under the heading 'About' which target the heading tag 'h2'*/
+{
+    content: '';
+    background:#efefef;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto 5px;
+
+}
+
+#form1
+{
+    background-image: linear-gradient(rgba(245, 236, 236, 0.8),rgba(253, 249, 249, 0.8)),url(Pictures/Finance.jfif);
+    /*Background Image of the form is set with a white gradient*/
+}
+#about .heading /*Targets the class 'heading' and align it as well as the first paragraph */
+{
+	text-align:center;
+}
+
+#about .btn /*Sets the position for the button in the about content*/
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    position: center; /*Sets the position of the button to center*/
+    
+}
+.about-content
+{
+    padding-top: 0px;
+    margin-left: 30px;
+}
+
+
+
+.container2
+{
+    max-width: 700px; /*Imits the width of the form to 700px which is useful when we resize*/
+    
+    border-radius: 5px;
+    /* padding: 5px 130px; */
+    width: 100%; /*Width of the form is 100% of its parent*/
+    margin-left: auto;
+    margin-right: auto;
+    /*Both margin left and right are placed on the container so the form can stay horizontally centered*/
+    
+    
+}
+.container2 .title
+{
+    font-size: 20px;
+    font-weight: 500; /*Adjust the boldness of the font*/
+    position: relative;
+    margin-left: 80px;
+   
+}
+
+.container2  .user-details
+{
+    display: flex;/*Automatically place textboxes in the user-details class side by side */
+    flex-wrap: wrap; /*When container2 is adjust beyond max-width 700px the text boxes in the user-details class would wrap to the next line*/
+    justify-content: space-between; /*Evenly distribute spaces between text boxes in the user-details class*/
+    margin-left: 80px;
+ 
+    
+    
+}
+form .user-details .input-box 
+{
+    /* margin: 20px 0 12px 0; */
+    width: calc(100% / 2- 10px);
+    
+    padding-top: 10px;
+}
+form .user-details .input-box .details 
+{
+    margin-bottom: 15px; /*Margin from the bottom of the textbox is set to 15px*/
+    display:block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+form .text
+{
+    margin-bottom: 115px; 
+    
+}
+form .user-details .input-box input
+{
+    /* height: 45px;
+    width: 100%; */
+    outline: none;
+    border-radius: 5px; /*Rounded corners to 5px for all textpox*/
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.32 ease;
+    
+}
+.user-details .input-box input:focus
+{
+    border-color: blue;
+
+}
+
+
+
+::placeholder
+{
+    color: #999 !important ;
+}
+
+
+
+#services
+{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(Pictures/luxury-hero.jpg);
+    
+    Color: #efefef !important;
+   
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+#services h1
+{
+    text-align: center;
+    Color: #efefef !important;
+    padding-bottom: 10px;
+}
+#services h1::after
+{
+    content: '';
+    background:#efefef;
+    display: block;
+    height: 3px;
+    width: 230px;
+    margin: 15px auto 5px;
+
+}
+#services .btn
+{
+    background-color: #555 !important;
+    
+}
+.services
+{
+    margin-top: 40px;
+    
+}
+#services .icon3
+{
+    margin-right: 1200px;
+    margin: 20px auto;
+}
+.icon 
+{
+    margin: 20px auto;
+}
+
+#services p
+{
+    font-size: 14px;
+    margin-top: 20px;
+}
+.services .col-md-3
+{
+    box-shadow: 0 2px 10px darkslategray;
+    margin-left: 45px;
+    margin-bottom: 100px;
+    margin-right: 48px;
+    
+    
+    
+}
+
+.services .col-md-3:hover
+{
+    box-shadow: 0 2px 20px lightslategray;
+    cursor: pointer;
+    transition: 0.7s;
+    
+    
+}
+
+
+
+
+
+
+/*--------Price Plans-----*/
+#price
+{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Pictures/Rain.jfif);
+    
+    
+    color: #fff;
+    
+    text-align: center;
+   
+    font-family: sans-serif;
+   
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+    
+    
+    /*padding: 80px 5px;*/
+    /* background: #efefef */
+}
+#price h1
+{
+    text-align: center;
+    Color: #efefef !important;
+    padding-bottom: 10px;
+}
+#price h1::after
+{
+    content: '';
+    background:#efefef;
+    display: block;
+    height: 3px;
+    width: 230px;
+    margin: 15px auto 5px;
+
+}
+.daily-plans
+{
+    margin: 10px auto;
+    display: inline;
+    float:left;
+    width: 100%;
+    background-color: transparent;
+    transition: 0.5s;
+    box-shadow: 0 2px 20px #333;
+    margin-bottom: 50px;
+    width: 100%;
+    padding-bottom: 32.5px;
+    
+}
+.Monthly-plans
+{
+    margin: 10px auto;
+    display: inline;
+    float:left;
+    width: 100%;
+    background-color: transparent;
+    transition: 0.5s;
+    box-shadow: 0 2px 20px #333;
+    margin-bottom: 50px;
+    width: 100%;
+}
+.Weekly-plans
+{
+    margin: 10px auto;
+    display: inline;
+    float:left;
+    width: 100%;
+    background-color: transparent;
+    transition: 0.5s;
+    box-shadow: 0 2px 20px #333;
+    margin-bottom: 50px;
+    width: 100%;
+}
+.daily-plans:hover
+{
+    box-shadow: 0 2px 20px lightslategray;
+    
+    
+}
+
+.Monthly-plans:hover
+{
+    box-shadow: 0 2px 20px lightslategray;
+    
+    
+}
+.Weekly-plans:hover
+{
+    box-shadow: 0 2px 20px lightslategray;
+    
+    
+}
+
+
+.price-head
+{
+    background-color: #2196f3;
+    display: inline;
+    float: left;
+    padding: 10px 5px;
+    text-align: center;
+    width: 100%;
+    
+}
+
+
+.price-head h2
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.price-head p{
+    font-size: 15px;
+    color: #ccc;
+    font-weight: bold;
+    line-height: 30px;
+
+}
+
+
+#price span
+{
+    font-size: 15px;
+}
+.price-content
+{
+    display: inline !important;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    color: white !important;
+    font-size: 13px;
+}
+
+.price-content ul li{
+    border-bottom: 1px solid gray;
+    padding:5px 10px;
+    list-style: none;
+}
+
+
+ul li:last-child
+{
+    border: none;
+}
+.price-button 
+{
+    display: inline;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    
+
+    padding-bottom: 37px;
+    
+}
+
+
+.register-btn
+{
+    
+    border-radius: 3px;
+    display:inline;
+    font-size: 18px;
+    padding: 5px ;
+    transition: 0.5s ;
+    
+    
+}
+
+.register-btn:hover 
+{
+    border-color: 1px solid #fff;
+    background-color: lightgray;
+    
+}
+a{
+    text-decoration: none !important;
+    color: #fff !important; 
+}
+a.register-btn:hover
+{
+    text-decoration: none !important;
+    color: black !important; 
+    transition: 0.1s;
+}
+
+
+.price .col-md-3
+{
+    float: inline-start;
+}
+
+/*Get in touch*/
+
+#contact
+{
+    background: #efefef;
+     padding-top: 10px;
+     padding-bottom: 40px;
+     color: #777;
+     
+     
+}
+
+#contact1
+{
+    background: #efefef;
+     padding-top: 10px;
+     padding-bottom: 40px;
+     color: white;  
+     
+     
+}
+
+.form-control /*Contact form input boxes*/
+{
+    border-radius: 0 !important;
+    border: none;
+    
+}
+::placeholder
+{
+    color: #999 !important ;
+}
+
+.follow
+{
+    background: rgb(214, 213, 213);
+    padding: 10px;
+    margin: 15px;
+}
+.contact-info .fa
+{
+    margin: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+.contact-info .fa-whatsapp
+{
+    margin: 10px;
+    color: rgb(131, 243, 131);
+    font-weight: bold;
+}
+/*----Footer-----*/
+
+#footer
+{
+    background: #333 ;
+    color: #fff;
+    padding: 10px;
+    font-size: x-small;
+}
+:fa-heart-0
+{
+    margin: 3px;
+    color: red;
+}
+
+
