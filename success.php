@@ -52,7 +52,7 @@ require_once 'sendemail.php';
         }
          if ($plantype == 2) 
          { 
-          
+          echo '<script type="text/javascript"> window.location="daily100days.php";</script>';
           
         }
          if ($plantype == 3) 
