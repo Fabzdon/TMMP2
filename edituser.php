@@ -16,11 +16,25 @@ if(isset($_POST['submit']))
       $id = $_POST["id"];
       $username = $_POST["username"];
       $password = $_POST["password"];
-      $new_password = md5($password.$username);
-
+      $check = 0;
       
 
-    $result = $crud->editUser($id, $username,$new_password);
+      if($password == null){
+      echo '<script>alert("No password entered default is : password1")</script>';
+      $password = "password1";
+      }
+      if($username == null){
+        echo '<script>alert("A username is required!")</script>';
+       
+        $check = 1;
+        echo '<script type="text/javascript"> window.location="viewusers.php";</script>';
+
+      }
+      if($check == 0){
+
+      $new_password = md5($password.$username);
+
+    $result = $user->editUser($id, $username,$new_password);
     if($result)
     {
         echo '<script type="text/javascript"> window.location="viewusers.php";</script>';
@@ -31,7 +45,7 @@ if(isset($_POST['submit']))
     {
         include 'includes/errormessage.php';
     }
-
+      }
 
 ?>
 

@@ -73,21 +73,7 @@ class crud
   }
 }
 
-public function getUsers()
-  {
-    try{
-    $sql = "SELECT * FROM `user` ";
-    $result = $this->database->query($sql);
-    return $result;
-  }
-  catch (PDOException $e)
-  {
 
-    echo $e->getMessage();
-    return false;
-  
-  }
-}
 
 
 
@@ -215,50 +201,8 @@ public function getUsers()
     }
 
   }
-  public function editUser($id, $username, $password){
-
-    try{
-      $sql = "UPDATE `user` SET `username`= :user_name,`password`=:pass_word WHERE id = :id ";
-
-       $statement = $this->database->prepare($sql);
-       $statement->bindparam(':id', $id);
   
-       $statement->bindparam(':user_name', $username);
-       $statement->bindparam(':pass_word', $password);
-       
   
-       $statement->execute();
-       return true;
-
-    }
-    catch(PDOException $e)
-    {
-
-        echo $e->getMessage();
-        //throw $e;
-        return false;
-
-    }
-
-  }
-  public function getSpecialtiesById($id){
-    try
-    {
-    $sql = "SELECT * FROM `specialties` where specialty_id = :id";
-    $stmt = $this->database->prepare($sql);
-    $stmt->bindparam(':id', $id);
-    $stmt->execute();
-    $result = $stmt->fetch();
-    return $result;
-    }
-    catch (PDOException $e)
-    {
-
-      echo $e->getMessage();
-      return false;
-    
-    }
-  }
 
 
   };

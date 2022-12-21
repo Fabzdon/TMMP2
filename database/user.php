@@ -108,8 +108,67 @@ public function getUserDetails($username, $password)
           return false;
         
         }
+        
+}
+public function editUser($id, $username, $password){
+
+  try{
+    $sql = "UPDATE `user` SET `username`= :user_name,`password`=:pass_word WHERE id = :id ";
+
+     $statement = $this->database->prepare($sql);
+     $statement->bindparam(':id', $id);
+
+     $statement->bindparam(':user_name', $username);
+     $statement->bindparam(':pass_word', $password);
+     
+
+     $statement->execute();
+     return true;
+
+  }
+  catch(PDOException $e)
+  {
+
+      echo $e->getMessage();
+      //throw $e;
+      return false;
+
+  }
+
+}
+public function getUsers()
+  {
+    try{
+    $sql = "SELECT * FROM `user` ";
+    $result = $this->database->query($sql);
+    return $result;
+  }
+  catch (PDOException $e)
+  {
+
+    echo $e->getMessage();
+    return false;
+  
+  }
 }
 
+public function getUserById($id)
+  {
+    try{
+    $sql = "SELECT * FROM `user` where id = :id";
+    $stmt = $this->database->prepare($sql);
+    $stmt->bindparam(':id',$id);
+    $result = $this->database->query($sql);
+    return $result;
+  }
+  catch (PDOException $e)
+  {
+
+    echo $e->getMessage();
+    return false;
+  
+  }
+}
 }
 
 ?>

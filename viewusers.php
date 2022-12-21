@@ -6,7 +6,7 @@ require_once 'includes/auth_check.php';
 ?>
 
 <?php
-$results = $crud->getUsers();
+$results = $user->getUsers();
 ?>
 <div class = "container">
  <table class="table table-striped ">
