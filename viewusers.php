@@ -48,5 +48,6 @@ $results = $crud->getUsers();
 
     <?php } ?>
 </table>
+</div>
 
 </html>

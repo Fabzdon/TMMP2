@@ -50,7 +50,7 @@
 
     <div class="mb-3">
   <label for="formFile"  class="form-label">Select Profile Picture</label>
-  <input class="form-control" name = "avatar" type="file" id="formFile">
+  <input class="form-control" accept="image/*" name = "avatar" type="file" id="formFile">
 </div>
 
     <div class="d-grid gap-2 col-4 mx-auto">
